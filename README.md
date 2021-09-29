@@ -8,10 +8,13 @@ Following the [semaphoreci.com](https://semaphoreci.com/community/tutorials/dock
 ### Get started with Docker
 Watch the [Get started with Docker](https://youtu.be/iqqDU2crIEQ) video walkthrough from DockerCon 2020.
 
+Use Dockerfile config from [Docker Docs](https://docs.docker.com/samples/rails/)
+
 ### Build the image
 ```
-$  docker build -t rails-toolbox \
-       --build-arg USER_ID=$(id -u)  \
-       --build-arg GROUP_ID=$(id -g) \
-       -f Dockerfile.rails .
+$  docker build -t rails-toolbox -f Dockerfile.rails .
 ```
+
+[`docker build` documentation](https://docs.docker.com/engine/reference/builder/).
+`-t` flag to point to specify a repository and tag at which to save the new image if the build succeeds.
+`-f` flag to point to a Dockerfile anywhere in the file system.
