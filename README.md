@@ -11,10 +11,18 @@ Watch the [Get started with Docker](https://youtu.be/iqqDU2crIEQ) video walkthro
 Use Dockerfile config from [Docker Docs](https://docs.docker.com/samples/rails/)
 
 ### Build the image
+#### With `docker build`
 ```
 $  docker build -t rails-toolbox -f Dockerfile.rails .
 ```
 
 [`docker build` documentation](https://docs.docker.com/engine/reference/builder/).
+
 `-t` flag to point to specify a repository and tag at which to save the new image if the build succeeds.
+
 `-f` flag to point to a Dockerfile anywhere in the file system.
+
+#### With `docker-compose run`
+```
+$  docker-compose run --no-deps web rails new . --force --database=postgresql
+```
