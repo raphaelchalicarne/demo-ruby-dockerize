@@ -30,3 +30,8 @@ Since this changes the Gemfile, the image needs to be built again.
 ```
 $  docker-compose build
 ```
+
+### Connect the database
+ ```
+$  docker-compose up
+```
