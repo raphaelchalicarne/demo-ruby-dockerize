@@ -24,3 +24,9 @@ $  docker build -t rails-toolbox .
 ```
 $  docker-compose run --no-deps web rails new . --force --database=postgresql
 ```
+
+Since this changes the Gemfile, the image needs to be built again.
+
+```
+$  docker-compose build
+```
